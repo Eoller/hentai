@@ -35,7 +35,7 @@ public class FilmFacade {
         Arrays.stream(titles).forEach(filmRepository::deleteById);
     }
 
-    public Page<FilmDto> find(Pageable pageable) {
+    public Page<FilmDto> findAll(Pageable pageable) {
         requireNonNull(pageable);
         return filmRepository
                 .findAll(pageable)
